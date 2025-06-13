@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'NotoSans Bold';
+    src: url(../fonts/NotoSans/NotoSans-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/Rubik/Rubik-VariableFont_wght.ttf) format('woff');
+}
+@font-face {
+    font-family: 'Ethno';
+    src: url(../fonts/Ethnocentric-Italic/Ethnocentric-Italic.otf) format('woff');
+}
+
+
+body {
+    background-image: url(../img/backgrounds/Rhodesdeck.png);
+    background-size: cover;
+    background-position: right;
+}
+
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(../img/backgrounds/bg.png);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+        .form-title {
+            font-family: 'NotoSans Bold';
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px black;
+        }
+        .img-preview {
+            max-width: 100px;
+            max-height: 100px;
+            margin-bottom: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }

@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../fonts/BebasNeue/BebasNeue-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Poetsen';
+    src: url(../fonts/poetsen_one/PoetsenOne-Regular.ttf) format('woff');
+}
+
+@font-face {
+    font-family: 'Mandala';
+    src: url(../fonts/welcome_mandala/Welcome\ Mandala.otf) format(woff);
+}
+
+
+@font-face {
+    font-family: 'NotoSans Medium';
+    src: url(../fonts/NotoSans/NotoSans-Medium.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'NotoSans Bold';
+    src: url(../fonts/NotoSans/NotoSans-Bold.woff) format(woff);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../img/backgrounds/img_bkg.png);
+    background-size: cover;
+    background-position: center;
+    /* animation: subtle 25s ease-in-out infinite alternate-reverse; */
+}
+/* 
+    @keyframes subtle {
+        0% {
+            background-size: 100%;
+            background-position: left;
+        }
+
+
+        50% {
+            background-size: 110%;
+            background-position: center;
+        }
+
+        100% {
+            background-size: 100%;
+            background-position: right;
+        }
+    } */
+
+
+/* container */
+
+.container1 {
+    display: grid;
+    width: 100%;
+    /* height: 100vh; */
+   
+    grid-template-areas: 
+    'container-kiri container-kanan';
+}
+
+
+.container-kiri {
+    grid-area: container-kiri;
+    display: grid;
+    
+    grid-template-areas: 
+    'hero'
+}
+
+    .hero {
+        grid-area: hero;
+        width: 80%;
+        left: 15%;
+        position: relative;
+        /* border: 2px solid red; */
+    }
+
+        .hero img {
+            max-width: 100%;
+
+        }
+    
+    .faction {
+        grid-area: hero;
+        top: 2%;
+        left: 2%;
+        position: relative;
+        opacity: 0.3;
+        
+    }
+
+        .faction img {
+            max-width: 100%;
+
+        }
+
+    .front-profile-container {
+        margin-top: -35%;
+        margin-left: -10%;
+        /* border: 2px solid salmon; */
+    }
+    
+        .front-profile {
+            display: flex;
+            position: relative;
+            z-index: 9;
+            left: 12%;
+            width: 90%;
+            /* border: 2px solid rgb(128, 0, 100); */
+        }
+
+            .job {
+                font-family: 'BebasNeue';
+                font-size: 3.5em;
+                text-shadow:
+                            -1px 1px 0 #bebebe,
+                            1px 1px 0 #bebebe;
+                /* border: 2px solid blue; */
+            }
+
+            .engineer-logo {
+                height: 70px;
+                width: 70px; 
+                padding-left: 15px;
+                transition: 0.3s;
+                /* border: 2px solid green; */
+            }
+            
+                .engineer-logo img {
+                    max-width: 100%;
+                    
+                }  
+
+                .engineer-logo:hover {
+                    transform: scale(1.1);
+                    filter: drop-shadow(2px 2px 7px #ffffff);
+                }
+
+                .engineer-tab {
+                    opacity: 0;
+                    grid-area: hero;
+                    position: absolute;
+                    background-image: url(../img/backgrounds/img_bkg.png);
+                    background-size: cover;
+                    box-shadow: 0px 1px 10px #000;
+                    left: 10%;
+                    width: 400px;
+                    border: 2px solid #000;
+                    padding: 0px;
+                    font-family: 'NotoSans Bold';
+                    color: aliceblue;
+                    font-size: 1.5em;
+                    font-variant: small-caps;
+                    text-align: justify;
+                    transition: .8s;
+                    transform: rotateY(10deg);
+                    cursor: default;
+                    
+                }
+
+                    .engineer-tab span {
+                        font-family: 'NotoSans Bold';
+                        font-variant:normal ;
+                    
+                        color: #ffffff;
+                        text-shadow:
+                        -1px 1px 0 #bebebe,
+                        1px 1px 0 #bebebe;
+
+                    }
+                
+                        .engineer-tab:target{
+                            opacity: 1;
+                            z-index: 10;
+                            margin-top: 7%;
+                            padding: 10px;
+                            
+                        }
+
+                        @keyframes fade-in {
+                            0% {
+                                opacity: 0;
+                            }
+                            100% {
+                                opacity: 1;
+                            }
+                        }
+                
+
+                .engineer-title {
+                    display: flex;
+                    background-image: url(../img/backgrounds/return_task_claim_all.png);
+                    background-position: right;
+                    width: 100%;
+                    height: 10%;
+                    box-shadow: 0px 1px 10px #000;
+                    align-content: center;
+                }
+                
+                    .engineer-title img {
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                    }
+        
+                    .engineer-title span {
+                        align-self: center;
+                        position: relative;
+                        color: #fff;
+                        left: 1%;
+                    }
+
+                .engineer-tab .close-button {
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                    
+
+            .nama {
+                /* border: 2px solid violet; */
+                position: relative;
+                left: 12%;
+                width: 80%;
+                line-height: 1;
+                font-family: 'NotoSans Bold';
+                font-size: 4em;
+                color: #fff;           
+                text-shadow:
+                            -2px -2px 0 #3d3d3d,  
+                            1px -1px 0 #3d3d3d,
+                            -1px 1px 0 #3d3d3d,
+                            1px 1px 0 #3d3d3d;
+                font-variant: small-caps;
+            }
+
+
+
+        
+
+.container-kanan {
+    grid-area: container-kanan;
+    display: grid;
+}
+
+    .semua-tabs {
+        display: grid;
+        grid-template-areas: 
+            'home'
+            'about';
+        padding-top: 5%;
+        padding-bottom: 10%;
+        gap: 10px;
+        margin-right: 25px;
+        
+        
+    }
+
+    .tabs {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: left;
+        
+    }
+
+        .tabs-bagian-kiri {
+            background-color: #03a6dd;
+            background-image: url(../img/backgrounds/grid_mask.png);
+            box-sizing: border-box;
+            width: 50px;
+            align-content: center;
+        }
+
+            .icon-tabs-bagian-kiri {
+                margin-top: 20px;
+            }
+            
+        .tabs-bagian-kanan {
+            display: flex;
+            background-image: url(../img/backgrounds/detail_info.png);
+            background-color: #3d3d3d;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            box-shadow: 1px 1px 30px #000;
+        }
+
+            .tabs-bagian-kanan img {
+                width: 100%;
+                cursor: pointer;
+            }
+            
+    
+    .tabs-description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+        font-family: 'Notosans Bold';
+        border: 2px solid #000;
+        justify-content: left;
+        box-shadow: 0px 1px 10px #000;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    
+        .info {
+            display: flex;
+            background-image: url(../img/backgrounds/return_task_claim_all.png);
+            background-position: right;
+            width: 100%;
+            height: 10%;
+            box-shadow: 0px 1px 10px #000;
+        }
+        
+        .info span {
+            position: relative;
+            font-size: 1.5em;
+            color: #fff;
+            left: 1%;
+        }
+
+        .info-container {
+            position: relative;
+            width: 95%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+            color: #fff;
+        }
+
+            .info-1 img {
+                position: relative;
+                width: 50px;
+                height: 50px;
+                }
+            
+            .info-2 img {
+                position: relative;
+                padding-left: 6px;
+                padding-right: 6px ;
+                height: 40px;
+            }
+            
+            .info-3 img {
+                position: relative;
+                /* width: 50px; */
+                height: 43px;
+                margin-left: 3px;
+                }
+
+
+
+
+/* Navbar */
+.navbar {
+    transform: translateY(-100%);
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    background: linear-gradient( #2d2d2d, #5d5d5d, #b4b4b4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5.5rem;
+    z-index: 9;
+    box-shadow: 0px 1px 10px #6d6d6d;
+    transition: 0.5s;
+    overflow-y: hidden;
+    align-content: center;
+}
+
+    .navbar.slide {
+    transform: translateY(0);
+    }
+
+    .navbar .navbar-background {
+        position: absolute;
+        width: 100%;
+    }
+
+
+    .navbar .tabs {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        text-align: center;
+        gap: 10px;
+        
+    }
+
+
+
+        .navbar a {
+            color: white;
+            font-family: 'Poetsen';
+            text-decoration: none;
+            padding: 2px;
+            font-size: 16px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: 500;
+            /* border: 2px solid red; */
+            transition: 0.3s;
+        }
+
+        .navbar .tabs img {
+            /* border: 2px solid red;   */
+            height: 140px;
+        }
+
+        .navbar .tabs .all-sm-btn {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 3rem;
+            text-align: center;
+            align-self: center;
+            transition: .3s;
+        }
+
+            .navbar .tabs .sm-btn {
+                transition: .3s;
+            }
+
+                .navbar .tabs .sm-btn:hover {
+                    transform: scale(1.1);
+                    filter: drop-shadow(2px 1px 7px #ffffff);
+                }
+
+                    .navbar .tabs .sm-btn a {
+                        position: relative;
+                        display: grid;
+                        justify-items: center;
+                    }
+
+                    .navbar .tabs .sm-btn img {
+                        height: 2rem;
+                    }
+
+
+        .navbar .tabs .all-lg-btn {
+            display: flex;
+            flex-direction: row;
+            /* text-align: center; */
+        }
+
+            .navbar .tabs .lg-btn {
+                transition: .3s;
+            }
+
+                .navbar .tabs .lg-btn:hover {
+                    transform: scale(1.1);
+                    filter: drop-shadow(2px 2px 7px #ffffff);
+                }
+                
+                    .navbar .tabs .lg-btn a {
+                        position: relative;
+                        display: grid;
+                    }
+
+                    .navbar .tabs .lg-btn img {
+                        height: 3rem;
+                    }
+
+
+.menu-btn {
+position: fixed;
+z-index: 10;
+top: 5px;
+left: 0;
+}
+
+    .menu-btn img {
+    height: 3rem;
+    cursor: pointer;
+    transition: .3s;
+    }
+
+    .menu-btn img:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(2px 2px 7px #ffffff);
+    }
+
+
+
+
+
+
+
+
+
+        

@@ -1,0 +1,490 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../fonts/BebasNeue/BebasNeue-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Poetsen';
+    src: url(../fonts/poetsen_one/PoetsenOne-Regular.ttf) format('woff');
+}
+
+@font-face {
+    font-family: 'Mandala';
+    src: url(../fonts/welcome_mandala/Welcome\ Mandala.otf) format(woff);
+}
+
+
+@font-face {
+    font-family: 'NotoSans Medium';
+    src: url(../fonts/NotoSans/NotoSans-Medium.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'NotoSans Bold';
+    src: url(../fonts/NotoSans/NotoSans-Bold.woff) format(woff);
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url(../fonts/Rubik/Rubik-VariableFont_wght.ttf) format(woff);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-image: url(../img/backgrounds/img_bless_list_bgdeco.png);
+    background-size: cover;
+}
+
+
+.main-container {
+    display: grid;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: start;
+    grid-template-areas: 
+    "container-kiri container-tengah container-kanan";
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    
+}
+
+.container-kiri {
+    grid-area: container-kiri;
+    display: grid;
+    position: relative;
+    width: 25rem;
+    /* border: 2px solid greenyellow; */
+    background-image: url(../img/backgrounds/img_bkg.png);
+    background-size: cover;
+}
+
+    .tab-skills {
+        position: relative;
+        margin-top: 20%;
+        max-width: 100%;
+        height: 100%;
+        /* border: 2px solid #00ff22; */
+        font-family: 'NotoSans Bold';
+    }
+        .title-skills {
+            display: flex;
+            width: 90%;
+            justify-content: center;
+        }
+
+            .title-skills img {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .title-skills span {
+                position: absolute;
+                color: #ffffff;
+                text-align: center;
+                font-size: 42px;
+                font-style: italic;
+                top: -2px ;
+                right: 45px;
+            }
+
+    .description-skills {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        font-family: 'Notosans Bold';
+        box-shadow: 0px 1px 10px #000;
+        /* border: 2px solid #000; */
+    }
+    
+        .description-skills span {
+            font-size: 2em;
+        }
+
+        .description-skills p {
+            font-size: .8em;
+            text-align: justify;
+            padding-top: 1rem;
+        }
+
+        .description-skills img {
+            position: absolute;
+            justify-self: center;
+        }
+
+
+        .info-skills,
+        .info-skills2,
+        .info-skills3,
+        .info-skills4,
+        .info-skills5,
+        .info-skills6,
+        .info-skills7,
+        .info-skills8 {
+            transform: translateX(-100%);
+            position: absolute;
+            justify-content: center;
+            margin-top: 20%;
+            padding: 20px;
+            height: 100%;
+            background-image: url(../img/backgrounds/bg.png);
+            background-size: cover;
+            background-position: bottom;
+            transition: .5s;
+        }
+
+            .info-skills.slide,
+            .info-skills2.slide,
+            .info-skills3.slide,
+            .info-skills4.slide,
+            .info-skills5.slide,
+            .info-skills6.slide,
+            .info-skills7.slide,
+            .info-skills8.slide {
+                transform: translateX(0);
+            }
+
+
+
+
+
+
+.container-tengah {
+    grid-area: container-tengah;
+    position: relative;
+    display: grid;
+    width: 35rem;
+    /* border: 2px solid #ff0000; */
+    grid-template-areas: 
+        'information' 
+        'class';
+    
+}
+
+
+    .container-tengah-atas {
+        display: flex;
+        grid-area: 'information';
+        background-image: url(../img/backgrounds/img_bkg_top.png);
+        background-position: 18% 0%;
+        width: 100%;
+        justify-content: center;
+    }
+
+        .classes-title {
+            position: absolute;
+            font-family: 'Notosans Bold';
+            color: #ffffff;
+            font-size: 2rem;
+            font-style: italic;
+            align-self: center;
+            
+        }
+
+
+
+
+    .container-tengah-bawah {
+        grid-area: class;
+        display: grid;
+        justify-content:center
+        /* border: 2px solid #ff0000; */
+    }
+
+        .semua-tabs {
+            display: grid;
+            grid-template-areas: 
+                'vanguard guard' 
+                'defender sniper'
+                'caster medic' 
+                'specialist supporter';
+            gap: 0px 2rem;
+            transform: rotateY(-20deg);
+            /* border: 2px solid rgb(220, 220, 224); */
+        }
+
+                .semua-tabs .tabs1 {
+                    display: grid;
+                    background-size: cover;
+                    background-position: center;
+                    align-self: center;
+                    /* border: 2px solid rgb(242, 255, 0); */
+                }
+
+                .tabs1 .tabs-element {
+                    display: flex;
+                    justify-content: center;
+                    background-image: url(../img/backgrounds/able_to_rich.png);
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 10px;
+                    width: 15rem;
+                    box-shadow: 0px 1px 6px 3px #04c0ea;
+                    /* border: 2px solid rgb(255, 136, 0); */
+                }
+                    
+
+                    .tabs1 .logo {
+                    width: 4rem;
+                    margin: 1rem;
+                    border-radius: 10px;
+                    transition: transform .8s ease;
+                    box-shadow: 3px 3px 10px .3px #ffffff;
+                    }
+
+                            .tabs1 .logo:hover {
+                                transform: scale(1.1);
+                                filter: invert(100%);
+                                transition: .8s ease;
+                            }
+
+                    .tabs1 .title {
+                        position: relative;
+                        text-align: center;
+                        align-content: center;
+                        font-family: 'Poetsen';
+                        min-width: 140px;
+                        font-size: 1.5em;
+                        color: #ffffff;           
+                        box-shadow: 0px 3px 10px 3px #f6ff00;
+                        text-shadow: 1px 1px 10px #000000;
+                        background-image: url(../img/backgrounds/reward_bg_yellow.png);
+                        background-position: left;
+                    }
+                    
+                    .tabs1 .join {
+                        display: flex;
+                        font-size: 1rem;
+                        /* align-items: ; */
+                        
+                    } 
+
+                        .tabs1 a {
+                            display: flex;
+                            font-size: 1rem;
+                            justify-content: center;
+                            align-items: center;
+                            padding-top: .8rem;
+                            transition: transform .6s ease, filter .6s ease;
+                        }
+                                .tabs1 a:hover {
+                                    transform: scale(1.1);
+                                    filter: invert(100%);
+                                    transition: .6s ease;
+                                }
+
+                            .tabs1 .join img{
+                                position: relative;
+                                width: 90%;
+                                border-radius: 5px;
+                                background-image: url(../img/button/main_mission_confirm_all_btn.png)  ;
+                                box-shadow: 0px 1px 5px 1px #04c0ea;
+                            } 
+
+                            .tabs1 .join span {
+                                color: antiquewhite;
+                                position: absolute;
+                                padding-left: 1.5rem;
+                                text-decoration: none;
+                            }
+
+                    
+
+.container-kanan {
+    grid-area: container-kanan;
+    display: grid;
+    width: 20rem;
+    perspective: 700px;
+    padding: 1.3rem;
+}
+
+.container-kanan-dalam {
+    display: flex;
+    flex-direction: column;
+    transform: rotateY(-10deg);
+    background-image: url(../img/backgrounds/return_main_left_bg_blur.png);
+    background-size: cover;
+    box-shadow: 0px 1px 10px #000;
+    height: 100%;
+    padding: 1rem;
+    border: 2px solid red;
+    }
+
+        .sub-class-title {
+            position: relative;
+            width: 110%;
+            height: 20%;
+            /* border: 2px solid blue; */
+            text-align: center;
+            background-image: url(../img/backgrounds/lock_bg.png);
+            background-size: cover;
+            background-position: center;
+            margin: -30px -40px -40px -40px;
+            padding: 18px 10px 18px 10px;
+        }
+
+            .sub-class-title span {
+                font-family: 'NotoSans Bold';
+                font-size: 1rem;
+                font-style: italic;
+                color: #000000;
+            }
+        
+        .sub-classes {
+            position: relative;
+            width: 100%;
+            margin-top: 40px;
+            height: 100%;
+            border: 2px solid rgb(187, 255, 0);
+        }
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+    transform: translateY(-100%);
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    background: linear-gradient( #2d2d2d, #5d5d5d, #b4b4b4);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5.5rem;
+    z-index: 9;
+    box-shadow: 0px 1px 10px #6d6d6d;
+    transition: 0.5s;
+    overflow-y: hidden;
+    align-content: center;
+}
+
+    .navbar.slide {
+    transform: translateY(0);
+    }
+
+    .navbar .navbar-background {
+        position: absolute;
+        width: 100%;
+    }
+
+
+    .navbar .tabs {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        text-align: center;
+        gap: 10px;
+        
+    }
+
+
+
+        .navbar a {
+            color: white;
+            font-family: 'Poetsen';
+            text-decoration: none;
+            padding: 2px;
+            font-size: 16px;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-weight: 500;
+            /* border: 2px solid red; */
+            transition: 0.3s;
+        }
+
+        .navbar .tabs img {
+            /* border: 2px solid red;   */
+            height: 140px;
+        }
+
+        .navbar .tabs .all-sm-btn {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 3rem;
+            text-align: center;
+            align-self: center;
+            transition: .3s;
+        }
+
+            .navbar .tabs .sm-btn {
+                transition: .3s;
+            }
+
+                .navbar .tabs .sm-btn:hover {
+                    transform: scale(1.1);
+                    filter: drop-shadow(2px 1px 7px #ffffff);
+                }
+
+                    .navbar .tabs .sm-btn a {
+                        position: relative;
+                        display: grid;
+                        justify-items: center;
+                    }
+
+                    .navbar .tabs .sm-btn img {
+                        height: 2rem;
+                    }
+
+
+        .navbar .tabs .all-lg-btn {
+            display: flex;
+            flex-direction: row;
+            /* text-align: center; */
+        }
+
+            .navbar .tabs .lg-btn {
+                transition: .3s;
+            }
+
+                .navbar .tabs .lg-btn:hover {
+                    transform: scale(1.1);
+                    filter: drop-shadow(2px 2px 7px #ffffff);
+                }
+                
+                    .navbar .tabs .lg-btn a {
+                        position: relative;
+                        display: grid;
+                    }
+
+                    .navbar .tabs .lg-btn img {
+                        height: 3rem;
+                    }
+
+
+.menu-btn {
+position: absolute;
+z-index: 10;
+top: 5px;
+left: 0;
+}
+
+    .menu-btn img {
+    height: 3rem;
+    cursor: pointer;
+    transition: .3s;
+    }
+
+    .menu-btn img:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(2px 2px 7px #ffffff);
+    }
+
+
+
+
+
+        
